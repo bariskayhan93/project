@@ -2,35 +2,27 @@ import React from 'react'
 import { useGlobalContext } from '../context'
 export default function Home() {  
   const { color,setColor } = useGlobalContext()
-  
+  const {items} =useGlobalContext()
 
   const handleClick=(e)=>{
     e.preventDefault();
-    e.target.style.backgroundColor='green'
+    e.target.style.backgroundColor='purple'
     }
-  
 
   return (
     <>
-    <div>
-      <h2 className="settings-section-title">Motor Speed</h2>
+    <div>  
+    {items.map((item) => {
+      const { id } = item;
+      if(id<11150)
+      return (
+        <h2 className="section-title">{id}</h2>
+      )})}
     </div>
-    <section className="error-page section">
+    <section>
       <div>
-        <button style={{background:color}} className="btn-settings home" type="submit" onClick={handleClick}>20HZ</button>
-        <button style={{background:color}} className="btn-settings home" type="submit" onClick={handleClick}>40HZ</button>
+        <button style={{background:color}} className="home-page" type="submit" onClick={handleClick}>20HZ</button>
       </div>
-      <div>
-      <button style={{background:color}} className="btn-settings home" type="submit" onClick={handleClick}>60HZ</button>
-      <button style={{background:color}} className="btn-settings home" type="submit" onClick={handleClick}>80HZ</button>
-
-      </div>
-      <div>
-      <button style={{background:color}} className="btn-settings home" type="submit" onClick={handleClick}>60HZ</button>
-      <button style={{background:color}} className="btn-settings home" type="submit" onClick={handleClick}>80HZ</button>
-
-      </div>
-      
     </section>
     </>
   )

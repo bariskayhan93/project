@@ -1,31 +1,28 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Loading from './Loading'
-import { useGlobalContext } from '../context'
-import image from '../logo.svg'
+import React from "react";
+import { Link } from "react-router-dom";
+import Loading from "./Loading";
+import { useGlobalContext } from "../context";
 
 export default function Database() {
-  const { items, loading } = useGlobalContext()
+  const { items, loading } = useGlobalContext();
   if (loading) {
-    return <Loading/>
+    return <Loading />;
   }
   if (items.length < 1) {
     return (
-      <h2 className='section-title'>
-        no item matched your search criteria
-      </h2>
-    )
+      <h2 className="section-title">no item matched your search criteria</h2>
+    );
   }
   return (
-    <section className='section'>
-      <h2 className='section-title'>Items</h2>
-      <div className='cocktails-center'>
-      {/*   last six items  (.slice(items.length-6, items.length))    */}
+    <section className="section">
+      <h2 className="section-title">Items</h2>
+      <div className="cocktails-center">
+        {/*   last six items  (.slice(items.length-6, items.length))    */}
         {items.map((item) => {
-const {  name, id, info, glass } = item;
+          const { name, id, info, glass, image } = item;
           return (
         <article className='cocktail'>
-      <div className='img-container'>
+      <div className='img'>
         <img src={image} alt={name} />
       </div>
       <div className='cocktail-footer'>
@@ -36,9 +33,10 @@ const {  name, id, info, glass } = item;
           details
         </Link>
       </div>
-    </article>)
+    </article>
+          );
         })}
       </div>
     </section>
-  )
+  );
 }

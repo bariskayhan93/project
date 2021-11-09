@@ -1,7 +1,6 @@
 import React,{ useEffect, useState} from 'react'
 import Loading from '../components/Loading'
 import { useParams, Link, } from 'react-router-dom'
-import image from '../logo.svg'
 
 export default function SingleItem() {
   const { id } = useParams()
@@ -23,6 +22,7 @@ export default function SingleItem() {
             strCategory: category,
             strGlass: glass,
             strInstructions: instructions,
+            strDrinkThumb: image,
             strIngredient1,
             strIngredient2,
             strIngredient3,

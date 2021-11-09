@@ -36,6 +36,8 @@ const AppProvider = ({ children }) => {
             strDrink,
             strAlcoholic,
             strGlass,
+            strDrinkThumb,
+            strInstructions
           } = item
 
           return {
@@ -43,6 +45,8 @@ const AppProvider = ({ children }) => {
             name: strDrink,
             info: strAlcoholic,
             glass: strGlass,
+            image: strDrinkThumb,
+            instructions:strInstructions
           }
         })
         setItems(newItems)

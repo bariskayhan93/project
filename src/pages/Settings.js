@@ -1,28 +1,37 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Modal from "../components/Modal";
+import Danger_modal from "../components/Danger_modal";
 import { useGlobalContext } from '../context';
 
 export default function Settings() {
-  const {  openModal } = useGlobalContext();
+  const {  openModal,items } = useGlobalContext();
 
   return (
     
     <>
-    <div>
-      <h2 className="settings-section-title">Motor Speed</h2>
+   {/*motor speed*/}
+   <div>  
+    {items.map((item) => {
+      const { name, id, info, glass, image } = item;
+      if(id<11150)
+      return (
+        <h2 className="section-title">{id}</h2>
+      )})}
     </div>
-    <section className="error-page section">
-      <div>
+
+    <section className="settings-page">
+      <div className="settings-container">
         <button className="btn-settings set" onClick={openModal}>20HZ</button>
+  
         <button className="btn-settings set"onClick={openModal}>40HZ</button>
-      </div>
-      <div>
+
         <button className="btn-settings set"onClick={openModal}>60HZ</button>
+
         <button className="btn-settings set"onClick={openModal}>80HZ</button>
 
       </div>
-      <Modal />
+      <Danger_modal />
     </section>
     </>
   );
