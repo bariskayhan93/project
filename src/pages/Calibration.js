@@ -9,12 +9,12 @@ export default function Calibration() {
       <div className="calibration-container">
         <button className="btn btn-primary btn-calibration">Calibration</button>
         
-        <section>
+        <section className="calibration-instructions">
         {items.map((item) => {
       const { instructions } = item;
       
       return (
-        <p className="section-title">{instructions}</p>
+        <p className="about-section">{instructions}</p>
       )})}
         </section>
       </div>

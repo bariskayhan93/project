@@ -146,19 +146,15 @@ Buttons
 
 .home-page{
   background: rgb(13, 153, 36);
+  margin: 0 auto;
   width: 900px;
-  padding: 1.45rem 50%;
-  margin: 0;
-  position: absolute;
-  top: 50%;
+  height: 150px;
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   border: 2px solid rgba(10, 39, 4, 0.26);
-  display:flex;
   transition: var(--mainTransition);
   cursor: pointer;
   font-size: 3.8rem;
-  display: inline-block;
   color: white;
   border-radius: var(--mainBorderRadius);
 }
