@@ -14,7 +14,9 @@ export default function Calibration() {
       const { instructions } = item;
       
       return (
-        <p className="about-section">{instructions}</p>
+        <section className="section about-section">
+        <p>{instructions}</p>
+        </section>
       )})}
         </section>
       </div>
