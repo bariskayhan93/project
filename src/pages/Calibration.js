@@ -5,7 +5,7 @@ export default function Calibration() {
   const { items } = useGlobalContext();
 
   return (
-    <section className="calibration-page section">
+    <section className="calibration-page">
       <div className="calibration-container">
         <button className="btn btn-primary btn-calibration">Calibration</button>
         
@@ -14,7 +14,7 @@ export default function Calibration() {
       const { instructions } = item;
       
       return (
-        <section className="section about-section">
+        <section>
         <p>{instructions}</p>
         </section>
       )})}
