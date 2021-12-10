@@ -1,11 +1,5 @@
-#### React Router Fix
+## Data Site using API
 
-(Fix)[https://dev.to/dance2die/page-not-found-on-netlify-with-react-router-58mc]
 
-#### CRA Fix
+https://project-react-safa.netlify.app/
 
-```
-
-"build": "CI= react-scripts build",
-
-```
